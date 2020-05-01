@@ -1,115 +1,111 @@
 body {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-	background: #FFA63B;
-	height: 100vh;
-	overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background: #ffa63b;
+    height: 100vh;
+    overflow: hidden;
 }
 .wrapper {
-  position: relative;
+    position: relative;
 }
 canvas {
-	animation: fade-in 2000ms 1000ms forwards;
-	background: #000;
-	background: transparent;
-	top: -320px;
-	// box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.05);
-	left: 0;
-	margin: auto;
-	opacity: 0;
-	position: absolute;
-	right: 0;
-  z-index: -1;
+    animation: fade-in 2000ms 1000ms forwards;
+    background: #000;
+    background: transparent;
+    top: -320px;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
 }
 .static {
-	animation: fade-in2 2000ms 1000ms forwards;
-	// background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/snow-static2.gif);
-	// border-radius: 50%;
-	bottom: 0;
-	height: 400px;
-	margin: auto;
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
+    animation: fade-in2 2000ms 1000ms forwards;
+    bottom: 0;
+    height: 400px;
+    margin: auto;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 svg {
-  width: 1100px;
-  z-index: 2 !important;
+    width: 1100px;
+    z-index: 2 !important;
 }
 #tost {
-  animation: updownTost 7s infinite cubic-bezier(0,0,.9,-0.9);
+    animation: updownTost 7s infinite cubic-bezier(1,-1,.7,0.1);
 }
 #toaster {
-/*   animation: shake 0.82s 3s cubic-bezier(.36,.07,.19,.97) both infinite; */
-  perspective: 1000px;
+    perspective: 1000px;
 }
 #handle {
-  animation: updownHandle 7s infinite cubic-bezier(.47,.05,.91,.01);
+    animation: updownHandle 7s infinite cubic-bezier(1,.05,.91,.01);
 }
 #hand {
-  animation: updownHand 7s infinite cubic-bezier(.47,.4,.01,.01);
+    animation: updownHand 7s infinite cubic-bezier(1,.05,.01,.01);
 }
 @keyframes updownHand {
-  0% {
-    transform: translateY(-400px);
-  }
-  45% {
-    transform: translateY(330px);
-  }
-  100% {
-    transform: translateY(-400px);
-  }
+    0% {
+        transform: translateY(-400px);
+    }
+    45% {
+        transform: translateY(315px);
+    }
+    100% {
+        transform: translateY(-400px);
+    }
 }
 @keyframes updownHandle {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-130px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+    0% {
+        transform: translateY(-130px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-130px);
+    }
 }
 @keyframes updownTost {
-  0% {
-    transform: translateY(50px);
-  }
-  50% {
-    transform: translateY(200px);
-  }
-  100% {
-    transform: translateY(50px);
-  }
+    0% {
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(50px);
+    }
 }
 @keyframes fade-in2 {
-	to {
-		opacity: 0.06;	
-	}
+    to {
+        opacity: 0.06;
+    }
 }
 @keyframes fade-in {
-	to {
-		opacity: 1;	
-	}
+    to {
+        opacity: 1;
+    }
 }
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
 
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
 
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
 }
