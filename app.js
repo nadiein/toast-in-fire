@@ -1,5 +1,4 @@
 //Fire animation
-
 let $ = {};
 
 $.PI = Math.PI;
